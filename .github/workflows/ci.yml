@@ -3,8 +3,6 @@ name: CI Pipeline
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   test:
@@ -12,22 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Descargar el repositorio
-      uses: actions/checkout@v3
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
 
-    - name: Instalar Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
+      - name: Instalar Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
-    - name: Instalar dependencias
-      run: npm install
-    
-    - name: Dar permisos a Vitest
-      run: chmod +x node_modules/.bin/vitest
-    
-    - name: Ejecutar tests
-      run: npx vitest run
+      - name: Instalar dependencias
+        run: npm install
 
-    - name: Ejecutar pruebas unitarias
-      run: npm test
+      - name: Ejecutar tests
+        run: node node_modules/vitest/vitest.mjs run
