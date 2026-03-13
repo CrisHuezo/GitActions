@@ -1,0 +1,23 @@
+{
+  "name": "m3e10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrisHuezo/GitActions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrisHuezo/GitActions/issues"
+  },
+  "homepage": "https://github.com/CrisHuezo/GitActions#readme",
+  "devDependencies": {
+    "vitest": "^4.1.0"
+  }
+}
